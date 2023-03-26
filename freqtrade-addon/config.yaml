@@ -88,34 +88,36 @@ options:
     required: false
     default: /config/freqtrade/user_data/trades
 schema:
-  telegram_enabled:
-    type: boolean
-  telegram_token:
-    type: string
-  telegram_chat_id:
-    type: string
-  web_enabled:
-    type: boolean
-  web_port:
-    type: integer
-  websocket_enabled:
-    type: boolean
-  websocket_port:
-    type: integer
-  api_enabled:
-    type: boolean
-  dry_run:
-    type: boolean
-  freqtrade_config_path:
-    type: string
-  freqtrade_logs_path:
-    type: string
-  freqtrade_data_path:
-    type: string
-  freqtrade_strategy_path:
-    type: string
-  freqtrade_trades_path:
-    type: string
+  type: object
+  properties:
+    telegram_enabled:
+      type: boolean
+    telegram_token:
+      type: string
+    telegram_chat_id:
+      type: string
+    web_enabled:
+      type: boolean
+    web_port:
+      type: integer
+    websocket_enabled:
+      type: boolean
+    websocket_port:
+      type: integer
+    api_enabled:
+      type: boolean
+    dry_run:
+      type: boolean
+    freqtrade_config_path:
+      type: string
+    freqtrade_logs_path:
+      type: string
+    freqtrade_data_path:
+      type: string
+    freqtrade_strategy_path:
+      type: string
+    freqtrade_trades_path:
+      type: string
 env_vars:
   TELEGRAM_ENABLED:
     type: boolean
@@ -161,35 +163,35 @@ env_vars:
     required: false
 data:
   logo: "https://raw.githubusercontent.com/freqtrade/freqtrade/stable/docs/assets/logo/freqtrade-logo.png"
-  env_vars:
-    - name: "TZ"
-      value: "{{ timezone }}"
-    - name: "TELEGRAM_TOKEN"
-      value: "{{ TELEGRAM_TOKEN }}"
-    - name: "TELEGRAM_CHAT_ID"
-      value: "{{ TELEGRAM_CHAT_ID }}"
-    - name: "WEB_ENABLED"
-      value: "{{ WEB_ENABLED }}"
-    - name: "WEB_PORT"
-      value: "{{ WEB_PORT }}"
-    - name: "WEBSOCKET_ENABLED"
-      value: "{{ WEBSOCKET_ENABLED }}"
-    - name: "WEBSOCKET_PORT"
-      value: "{{ WEBSOCKET_PORT }}"
-    - name: "API_ENABLED"
-      value: "{{ API_ENABLED }}"
-    - name: "DRY_RUN"
-      value: "{{ DRY_RUN }}"
-    - name: "FREQTRADE_CONFIG_PATH"
-      value: "{{ FREQTRADE_CONFIG_PATH }}"
-    - name: "FREQTRADE_LOGS_PATH"
-      value: "{{ FREQTRADE_LOGS_PATH }}"
-    - name: "FREQTRADE_DATA_PATH"
-      value: "{{ FREQTRADE_DATA_PATH }}"
-    - name: "FREQTRADE_STRATEGY_PATH"
-      value: "{{ FREQTRADE_STRATEGY_PATH }}"
-    - name: "FREQTRADE_TRADES_PATH"
-      value: "{{ FREQTRADE_TRADES_PATH }}"
+  # env_vars:
+  #   - name: "TZ"
+  #     value: "{{ timezone }}"
+  #   - name: "TELEGRAM_TOKEN"
+  #     value: "{{ TELEGRAM_TOKEN }}"
+  #   - name: "TELEGRAM_CHAT_ID"
+  #     value: "{{ TELEGRAM_CHAT_ID }}"
+  #   - name: "WEB_ENABLED"
+  #     value: "{{ WEB_ENABLED }}"
+  #   - name: "WEB_PORT"
+  #     value: "{{ WEB_PORT }}"
+  #   - name: "WEBSOCKET_ENABLED"
+  #     value: "{{ WEBSOCKET_ENABLED }}"
+  #   - name: "WEBSOCKET_PORT"
+  #     value: "{{ WEBSOCKET_PORT }}"
+  #   - name: "API_ENABLED"
+  #     value: "{{ API_ENABLED }}"
+  #   - name: "DRY_RUN"
+  #     value: "{{ DRY_RUN }}"
+  #   - name: "FREQTRADE_CONFIG_PATH"
+  #     value: "{{ FREQTRADE_CONFIG_PATH }}"
+  #   - name: "FREQTRADE_LOGS_PATH"
+  #     value: "{{ FREQTRADE_LOGS_PATH }}"
+  #   - name: "FREQTRADE_DATA_PATH"
+  #     value: "{{ FREQTRADE_DATA_PATH }}"
+  #   - name: "FREQTRADE_STRATEGY_PATH"
+  #     value: "{{ FREQTRADE_STRATEGY_PATH }}"
+  #   - name: "FREQTRADE_TRADES_PATH"
+  #     value: "{{ FREQTRADE_TRADES_PATH }}"
   ingress:
     - host: "{{ addon_slug }}.local"
       path: /
