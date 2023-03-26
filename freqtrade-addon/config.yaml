@@ -88,36 +88,34 @@ options:
     required: false
     default: /config/freqtrade/user_data/trades
 schema:
-  type: object
-  properties:
-    telegram_enabled:
-      type: boolean
-    telegram_token:
-      type: string
-    telegram_chat_id:
-      type: string
-    web_enabled:
-      type: boolean
-    web_port:
-      type: integer
-    websocket_enabled:
-      type: boolean
-    websocket_port:
-      type: integer
-    api_enabled:
-      type: boolean
-    dry_run:
-      type: boolean
-    freqtrade_config_path:
-      type: string
-    freqtrade_logs_path:
-      type: string
-    freqtrade_data_path:
-      type: string
-    freqtrade_strategy_path:
-      type: string
-    freqtrade_trades_path:
-      type: string
+  telegram_enabled:
+    type: boolean
+  telegram_token:
+    type: string
+  telegram_chat_id:
+    type: string
+  web_enabled:
+    type: boolean
+  web_port:
+    type: integer
+  websocket_enabled:
+    type: boolean
+  websocket_port:
+    type: integer
+  api_enabled:
+    type: boolean
+  dry_run:
+    type: boolean
+  freqtrade_config_path:
+    type: string
+  freqtrade_logs_path:
+    type: string
+  freqtrade_data_path:
+    type: string
+  freqtrade_strategy_path:
+    type: string
+  freqtrade_trades_path:
+    type: string
 env_vars:
   TELEGRAM_ENABLED:
     type: boolean
