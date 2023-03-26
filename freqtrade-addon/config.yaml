@@ -113,7 +113,7 @@ schema:
     freqtrade_trades_path:
       type: string
 env_vars:
-  TELEGRAM_ENABLED: '{{ telegram_enabled }}'
+  TELEGRAM_ENABLED:
     type: boolean
     required: false
   TELEGRAM_TOKEN:
