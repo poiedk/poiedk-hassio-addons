@@ -5,6 +5,12 @@ version: 1.0.0
 startup: services
 panel: true
 logo: logo.png
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
 options:
   telegram_enabled:
     name: Telegram Enabled
