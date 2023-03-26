@@ -1,0 +1,8 @@
+# Home Assistant add-ons repository configuration
+# See: https://developers.home-assistant.io/docs/add-ons/repository
+
+name: freqtrade-addon
+display_name: Freqtrade Home Assistant Add-on
+description: A Home Assistant add-on for running Freqtrade, a free, open-source crypto trading bot.
+url: https://github.com/poiedk/poiedk-hassio-addons
+maintainer: poiedk
